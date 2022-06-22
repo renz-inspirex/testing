@@ -1,0 +1,178 @@
+@import "themes/theme";
+
+.ja-job-list {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.job {
+	padding: 1rem;
+	width: 60rem;
+	height: 100%;
+	border-radius: 0.5rem;
+	box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+
+	.title a {
+		color: black;
+		text-decoration: none;
+		position: relative;
+		font-size: 2rem;
+	}
+
+	.meta {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1.1rem;
+		margin-top: 1.1rem;
+
+		.classifications {
+			position: relative;
+			padding-top: 10px;
+		}
+
+		.classifications li {
+			list-style: square;
+		}
+	}
+
+	.view-details {
+		width: 100%;
+		margin: 14px;
+		padding-right: 20px;
+		text-align: right;
+		font-size: medium;
+		text-decoration: none;
+	}
+}
+
+.classifications::before {
+	content: "Job Details: ";
+	font-size: 18px;
+	position: absolute;
+	top: -20px;
+	left: 0px;
+}
+
+.date-posted::before {
+	content: "Date Posted: ";
+}
+
+.ja-job-details {
+	border-radius: 0.5rem;
+	width: 80rem;
+
+	display: flex;
+	flex-direction: column;
+	margin: 2rem auto;
+	padding: 4rem;
+	box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.5);
+
+	.title {
+		align-self: center;
+	}
+
+	.meta {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 1.1rem;
+		margin-top: 1.1rem;
+
+		.classifications {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			list-style: square;
+			justify-content: space-evenly;
+			position: relative;
+			padding-top: 10px;
+
+			&::before {
+				content: "Job Details: ";
+				font-size: 18px;
+				position: absolute;
+				top: -20px;
+				left: 0px;
+			}
+		}
+
+		.date-posted::before {
+			content: "Date Posted: ";
+		}
+	}
+
+	.bullet-points {
+		position: relative;
+		padding-top: 10px;
+
+		&::before {
+			content: "Perks ";
+			position: absolute;
+			top: -20px;
+			left: 0px;
+		}
+	}
+
+	.apply {
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		font-size: 1rem;
+
+		.back-link {
+			text-decoration: none;
+
+			&::before {
+				content: "< ";
+			}
+		}
+
+		.ja-button {
+			background-color: rgb(242, 84, 50);
+			color: white;
+			padding: 10px;
+			border-radius: 0.25rem;
+		}
+	}
+}
+
+.powered-by-jobadder {
+	display: none;
+}
+
+.ja-apply-iframe {
+	display: flex;
+	flex-direction: column;
+
+	.apply {
+		padding: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		font-size: 1rem;
+
+		.back-link {
+			text-decoration: none;
+
+			&::before {
+				content: "< ";
+			}
+		}
+
+		.ja-button {
+			background-color: rgb(242, 84, 50);
+			color: white;
+			padding: 10px;
+			border-radius: 0.25rem;
+		}
+	}
+}
